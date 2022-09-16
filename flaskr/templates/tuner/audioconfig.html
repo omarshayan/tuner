@@ -1,0 +1,15 @@
+{% block header %}
+  <h1>{% block title %}Configure Audio{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="device">Device</label>
+    <select name="device" id="device" required>
+    	{% for device in devices %}
+    	<option value="{{device}}">{{device}}</option>
+    	{% endfor %}
+    </select>
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}
